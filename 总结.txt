@@ -1,0 +1,19 @@
+MySQL的从另外一张表update多个字段到另外一张表中去
+
+例如: 把表 tk_zyt_scenery_order的 字段更新到 t_advs_order中去, 一般可能会这样写:
+
+UPDATE t_advs_order  SET
+
+ attribute1=(SELECT o.order_state FROM tk_zyt_scenery_order o WHERE o.order_id=`on`),
+
+ attribute2=(SELECT o.order_state FROM tk_zyt_scenery_order o WHERE o.order_id=`on`)
+
+ WHERE EXISTS (SELECT o.order_state FROM tk_zyt_scenery_order o WHERE o.order_id=`on`);
+
+这样效率比较低下, 优化写法:
+
+UPDATE t_advs_order a INNER JOIN tk_zyt_scenery_order s ON s.order_id=a.`on` SET
+
+ a.attribute1=s.order_id,
+
+ a.attribute2=s.order_id;

@@ -1,4 +1,4 @@
-MySQL的从另外一张表update多个字段到另外一张表中去
+1.MySQL的从另外一张表update多个字段到另外一张表中去
 
 例如: 把表 tk_zyt_scenery_order的 字段更新到 t_advs_order中去, 一般可能会这样写:
 
@@ -17,3 +17,9 @@ UPDATE t_advs_order a INNER JOIN tk_zyt_scenery_order s ON s.order_id=a.`on` SET
  a.attribute1=s.order_id,
 
  a.attribute2=s.order_id;
+
+2.PHPexcel $objPHPExcel->getActiveSheet()->getStyle( 'B5')->getAlignment()->setShrinkToFit(true); //长度不够显示的时候是否自动换行
+325
+$objPHPExcel->getActiveSheet()->getStyle( 'B5')->getAlignment()->setShrinkToFit(true); //自动转换显示字体大小,使内容能够显示
+
+3.PHPexcel 打印有中文出现乱码可以用echo iconv("UTF-8","GBK",$methodStr)

@@ -23,3 +23,10 @@ UPDATE t_advs_order a INNER JOIN tk_zyt_scenery_order s ON s.order_id=a.`on` SET
 $objPHPExcel->getActiveSheet()->getStyle( 'B5')->getAlignment()->setShrinkToFit(true); //自动转换显示字体大小,使内容能够显示
 
 3.PHPexcel 打印有中文出现乱码可以用echo iconv("UTF-8","GBK",$methodStr)
+
+
+4.自动生成API 文档
+http://www.jianshu.com/p/d6626e6bd72c 
+
+5.接口开发好帖
+http://www.cnblogs.com/net515/p/5931392.html

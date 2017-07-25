@@ -30,3 +30,9 @@ http://www.jianshu.com/p/d6626e6bd72c
 
 5.接口开发好帖
 http://www.cnblogs.com/net515/p/5931392.html
+
+https://github.com/caoym/phprs-restful/wiki/%E4%B8%AD%E6%96%87
+https://github.com/caoym/phprs-restful/wiki/%E4%B8%AD%E6%96%87
+
+5.laraverl和vue结合的项目
+http://laravelacademy.org/post/6408.html

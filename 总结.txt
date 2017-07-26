@@ -36,3 +36,6 @@ https://github.com/caoym/phprs-restful/wiki/%E4%B8%AD%E6%96%87
 
 5.laraverl和vue结合的项目
 http://laravelacademy.org/post/6408.html
+
+6.Vue 爬坑之路（六）—— 使用 Vuex + axios 发送请求
+http://www.cnblogs.com/wisewrong/p/6402183.html

@@ -39,3 +39,5 @@ http://laravelacademy.org/post/6408.html
 
 6.Vue 爬坑之路（六）—— 使用 Vuex + axios 发送请求
 http://www.cnblogs.com/wisewrong/p/6402183.html
+
+7.svn://116.62.102.198:30005/qingyingshou4.0

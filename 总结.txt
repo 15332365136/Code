@@ -45,3 +45,5 @@ http://www.cnblogs.com/wisewrong/p/6402183.html
 8.wx Ö§¸¶http://blog.csdn.net/we_phone/article/details/69824924
 
 https://www.zhihu.com/question/20647148
+
+10.phpsocket http://blog.csdn.net/trace332/article/details/6325986

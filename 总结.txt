@@ -12,7 +12,11 @@ UPDATE t_advs_order  SET
 
 这样效率比较低下, 优化写法:
 
-UPDATE t_advs_order a INNER JOIN tk_zyt_scenery_order s ON s.order_id=a.`on` SET
+UPDATE t_advs_order a 
+
+INNER JOIN tk_zyt_scenery_order s 
+
+ON s.order_id=a.`on` SET
 
  a.attribute1=s.order_id,
 
@@ -47,3 +51,31 @@ http://www.cnblogs.com/wisewrong/p/6402183.html
 https://www.zhihu.com/question/20647148
 
 10.phpsocket http://blog.csdn.net/trace332/article/details/6325986
+
+
+数据库递归函数
+
+http://blog.csdn.net/xiaodingdou/article/details/53286503?_t_t_t=0.9440201732795686
+
+CREATE FUNCTION `getChildDepartList`(
+		dingId INT 
+) 
+	RETURNS varchar(1000) CHARSET utf8 
+	DETERMINISTIC 
+	COMMENT '传入ding_id查找字级' 
+BEGIN
+	DECLARE sTemp VARCHAR(1000);
+    DECLARE sTempChd VARCHAR(1000);
+    SET sTemp = '$';
+    SET sTempChd =cast(dingId as CHAR);
+	
+    WHILE sTempChd is not null DO
+ 	
+	SET sTemp = concat(sTemp,',',sTempChd);
+	
+	SELECT group_concat(`ding_id`) INTO sTempChd FROM  company_depart where FIND_IN_SET(`parent_ding_id`, sTempChd)>0;
+
+   	END WHILE;
+
+	RETURN sTemp;
+END 

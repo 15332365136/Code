@@ -1,3 +1,6 @@
+http://python.jobbole.com/87471/
+
+
 1.shape函数
 
 shape函数是numpy.core.fromnumeric中的函数，它的功能是查看矩阵或者数组的维数。

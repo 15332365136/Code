@@ -79,3 +79,9 @@ BEGIN
 
 	RETURN sTemp;
 END 
+
+
+安装Git Bash 的时候有提示，MinTTY不支持交互操作，如Python和Node, 用winpty + program就可以运行了。
+
+
+http://python.jobbole.com/87471/
